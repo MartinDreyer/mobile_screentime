@@ -8,7 +8,7 @@ export default function Index() {
 
   return (
     <div 
-    className="w-full max-w-xs mt-4">
+    className="w-full max-w-md mt-4">
       <Form/>
     </div>
   )
