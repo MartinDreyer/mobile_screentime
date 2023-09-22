@@ -103,7 +103,7 @@ export default function Result( { data, entry }: ResultProps) {
 
 
   return (
-    <div ref={result} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
+    <div ref={result} className='bg-white rounded px-8 pt-6 pb-8'>
       <img src='mobilfri.png' className='img-mobilfri'/>
       <div className='my-4'>
         <div>Dit skærmforbrug: <span className='font-semibold'>{personalHours} timer og {personalMinutes} minutter.</span></div>
