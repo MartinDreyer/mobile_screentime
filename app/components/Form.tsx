@@ -67,7 +67,7 @@ export default function () {
       <label 
       className="block  text-gray-700 text-xl text-center font-bold mb-8">
         Bruger du mobilen mere<br/> eller mindre end gennemsnittet? <br/>
-        <span className='font-normal'>Indtast din skærmtid og find ud af det her:</span>
+        <span className='font-normal text-sm'>Indtast din skærmtid og find ud af det her:</span>
       </label>
       <div className='w-full flex mb-4 justify-center'>
         <p className='screentime-info max-w-md text-center'>Statistikken for skærmtid findes under indstillinger på din telefon. På iPhone findes statistikken under <b>Skærmtid</b>, mens den på Android findes under <b>Digital Balance.</b></p>
