@@ -104,22 +104,23 @@ export default function Result( { data, entry }: ResultProps) {
 
   return (
     <div ref={result} className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
-      <div className='mb-4'>
-        <div className="bg-blue-600 bar mb-2" style={{"width": adjustedWidths.avgPersonal+'%'}}></div>
-        <p>Dit skærmforbrug: <span className='font-semibold'>{personalHours} timer og {personalMinutes} minutter.</span></p>
+      <img src='mobilfri.png' className='img-mobilfri'/>
+      <div className='my-4'>
+        <div>Dit skærmforbrug: <span className='font-semibold'>{personalHours} timer og {personalMinutes} minutter.</span></div>
+        <div className="bg-blue-300 bar mb-2" style={{"width": adjustedWidths.avgPersonal+'%'}}></div>
       </div>
       <div className='mb-4'>
-        <div className="bg-green-600 bar mb-2" style={{"width": adjustedWidths.avgDenmark+'%'}}></div>
-        <p>Gennemsnit for danskerne: <span className='font-semibold'>{smartPhoneHoursDK} time og {smartPhoneMinutesDK} minutter</span></p>
+        <div>Gennemsnit for danskerne: <span className='font-semibold'>{smartPhoneHoursDK} time og {smartPhoneMinutesDK} minutter</span></div>
+        <div className="bg-[#37c759] bar mb-2" style={{"width": adjustedWidths.avgDenmark+'%'}}></div>
       </div>
-      <div  className='text-center'>
-        <p>Du bruger skærmen<br/>
-        <div className="mt-4 mb-4">
+      <div  className='text-center mt-8'>
+        <div>Du bruger skærmen<br/>
+        <div className="mt-2 mb-4">
           <span className="text-4xl font-bold"> {diff?.hours}</span> timer og 
           <span className='text-4xl font-bold'> {diff?.minutes} </span> minutter<br/>
         </div>
         {diff?.text} end gennemsnitsdanskeren
-        </p>
+        </div>
       </div>
     </div>
   )

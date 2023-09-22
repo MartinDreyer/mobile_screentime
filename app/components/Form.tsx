@@ -16,7 +16,7 @@ export default function () {
     const handleSubmit = async (event: React.FormEvent) => {
       event.preventDefault()
       
-      if (!hours || !minutes || !age || !zipCode) {
+      if (hours === undefined || minutes === undefined || !age || !zipCode) {
         setFormError("Udfyld venligst alle felterne")
         return
       }
@@ -60,7 +60,7 @@ export default function () {
   
   return (
     <>
-{!hasFetchedData &&    
+    <div className={hasFetchedData ? 'hidden' : ''}>
     <form 
     onSubmit={handleSubmit} 
     className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -74,7 +74,7 @@ export default function () {
         className=" flex justify-between items-center">
           <input 
           type="number"
-          min="0"
+          min="-1"
           value={hours !== null ? hours : ''}
           onChange={(e) => {
             const inputValue = e.target.value;
@@ -89,7 +89,7 @@ export default function () {
           </p>
           <input 
           type="number" 
-          min="0"
+          min="-1"
           max="59"
           value={minutes !== null ? minutes : ''}
           onChange={(e) => {
@@ -135,7 +135,7 @@ export default function () {
       <div 
       className="flex justify-center">
         <button 
-        className="bg-[#162c41] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4" 
+        className="bg-[#37c759] hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-4" 
         type="submit"
         >
           Bekræft
@@ -143,8 +143,13 @@ export default function () {
 
       </div>
         {formError && <p className="error">{formError}</p>}
-    </form>}
-    {hasFetchedData && <Result data={fetchedData} entry={entry} />}
+    </form>
+    </div>
+   
+
+    <div className={!hasFetchedData ? 'hidden' : ''}>
+      <Result data={fetchedData} entry={entry} />
+    </div>
     </>
 
   )

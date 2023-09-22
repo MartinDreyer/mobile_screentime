@@ -57,3 +57,7 @@ input[type=number] {
 .bar {
   height: 20px;
 }
+
+.img-mobilfri {
+  width: 100%;
+}
