@@ -122,6 +122,8 @@ export default function Result( { data, entry }: ResultProps) {
         {diff?.text} end gennemsnitsdanskeren
         </div>
       </div>
+      <p className='source-info mt-4'><b>Kilde:</b> DR Medieforsknings årlige rapport om udviklingen
+i danskernes brug af elektroniske medier.</p>
     </div>
   )
 }
