@@ -65,8 +65,9 @@ export default function () {
     onSubmit={handleSubmit} 
     className="bg-white rounded px-8 pt-6 pb-8">
       <label 
-      className="block text-gray-700 text-xl text-center font-semibold mb-8">
-        Hvor meget tid bruger du på mobilen?
+      className="block  text-gray-700 text-xl text-center font-bold mb-8">
+        Bruger du mobilen mere<br/> eller mindre end gennemsnittet? <br/>
+        <span className='font-normal'>Indtast din skærmtid og find ud af det her:</span>
       </label>
       <div className='w-full flex mb-4 justify-center'>
         <p className='screentime-info max-w-md text-center'>Statistikken for skærmtid findes under indstillinger på din telefon. På iPhone findes statistikken under <b>Skærmtid</b>, mens den på Android findes under <b>Digital Balance.</b></p>
