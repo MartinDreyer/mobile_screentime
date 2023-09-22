@@ -145,6 +145,9 @@ export default function () {
         </button>
 
       </div>
+      <div className='w-full flex mb-4 justify-center'>
+          <p className='screentime-info'>Info om skærmtid, alder og postnummer bliver gemt i en database og de samlede besvarelser kan i fremtiden blive brugt i vores journalistik. Vi gemmer hverken navn eller ip-adresse, når du svarer. </p>
+      </div>
         {formError && <p className="error">{formError}</p>}
     </form>
     </div>
