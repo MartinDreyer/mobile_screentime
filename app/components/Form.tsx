@@ -69,7 +69,7 @@ export default function () {
         Hvor meget tid bruger du på mobilen?
       </label>
       <div className='w-full flex mb-4 justify-center'>
-        <p className='screentime-info max-w-md'>Statistikken for skærmtid findes under indstillinger på din telefon. På iPhone findes statistikken under <b>Skærmtid</b>, mens den på Android findes under <b>Digital Balance.</b></p>
+        <p className='screentime-info max-w-md text-center'>Statistikken for skærmtid findes under indstillinger på din telefon. På iPhone findes statistikken under <b>Skærmtid</b>, mens den på Android findes under <b>Digital Balance.</b></p>
       </div>
       <div 
       className="mb-4">
@@ -146,7 +146,7 @@ export default function () {
 
       </div>
       <div className='w-full flex mb-4 justify-center'>
-          <p className='screentime-info'>Info om skærmtid, alder og postnummer bliver gemt i en database og de samlede besvarelser kan i fremtiden blive brugt i vores journalistik. Vi gemmer hverken navn eller ip-adresse, når du svarer. </p>
+          <p className='screentime-info text-center'>Info om skærmtid, alder og postnummer bliver gemt i en database og de samlede besvarelser kan i fremtiden blive brugt i vores journalistik. Vi gemmer hverken navn eller ip-adresse, når du svarer. </p>
       </div>
         {formError && <p className="error">{formError}</p>}
     </form>
