@@ -16,7 +16,7 @@ export default function () {
     const handleSubmit = async (event: React.FormEvent) => {
       event.preventDefault()
       
-      if (hours === undefined || minutes === undefined || !age || !zipCode) {
+      if (hours === null || minutes === null || !age || !zipCode) {
         setFormError("Udfyld venligst alle felterne")
         return
       }
